@@ -8,4 +8,10 @@ public class Pessoas {
 		
 	}
 	
+	void dar (int numFigurinhas) {
+		this.numFigurinhas -= numFigurinhas;
+		
+		
+	}
+	
 }
