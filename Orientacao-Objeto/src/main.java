@@ -19,18 +19,12 @@ public class main {
 		
 		System.out.println(pessoa2.nome + " tem " + pessoa2.numFigurinhas + " figurinha(s).");
 		
-		pessoa2.dar(2, pessoa1);
+		boolean retorno = pessoa2.dar(4, pessoa1);
 		
-		System.out.println("Depois:");
-		System.out.println(pessoa1.nome + " tem " + pessoa1.numFigurinhas + " figurinha(s).");
-		System.out.println(pessoa2.nome + " tem " + pessoa2.numFigurinhas + " figurinha(s).");
-		
-		 
-		
-		
-		
-		
-		
+		if (retorno == true) {
+			System.out.println("Depois:");
+			System.out.println(pessoa1.nome + " tem " + pessoa1.numFigurinhas + " figurinha(s).");
+			System.out.println(pessoa2.nome + " tem " + pessoa2.numFigurinhas + " figurinha(s).");
+		}	
 	}
-
 }
