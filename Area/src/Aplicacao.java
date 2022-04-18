@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Aplicacao {
@@ -52,7 +53,7 @@ public class Aplicacao {
 		}
 		
 		else {
-			System.out.println("Forma não identificada");
+			System.out.println("Forma não identificada!");
 		}
 		
 		
