@@ -30,7 +30,7 @@ public class Main {
 
 //		int diasemana = 6;
 //		
-//		switch(diasemana) {
+//		switch(diasemana) { 						//usado para teste de conteúdo, diferente do if else que testa condições que podem ser completamente distintas.
 //			case 1:
 //				System.out.println("Domingo");
 //				break;
@@ -72,22 +72,23 @@ public class Main {
 //			default:
 //				System.out.println("Valor inválido");
 //		}
+//		laços de repetição
 		
 //		int x = 0;
 //		
-//		while(x < 10) {
+//		while(x < 10) { 			//repete a operação enquanto a condição for verdadeira, não tem pré definição de quantas vezes irá repetir 
 //			System.out.println(x);
 //			x = x+1;
 //		}
 //		
 //		x = 0;
-//		do {
+//		do {						//realizar a operação até a condição for verdadeira
 //			System.out.println(x);
 //			x = x+1;
 //		} while(x < 10);
 		
 		System.out.println("Tabuada do 2");
-		for (int x=0; x<11; x++) {
+		for (int x=0; x<11; x++) {	//serve para repetir operações em que se sabe quantas vezes terá de repetir
 			System.out.println(2 + " x " + x + " = " + x*2);
 		}
 		
