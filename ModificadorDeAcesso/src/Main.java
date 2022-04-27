@@ -3,7 +3,9 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		ContaBancaria conta1 = new ContaBancaria();
+		ContaBancaria conta1 = new ContaBancaria(true, 3);
+		ContaBancaria conta2 = new ContaBancaria();
+		
 
 //		conta1.ativo = true;
 //		conta1.numConta = 1234;
@@ -13,10 +15,19 @@ public class Main {
 //		System.out.println(conta1.numConta);
 //		System.out.println(conta1.saldo);
 
-		conta1.receber(100.50); // como o método é publico é possível o acessar de outras classes
+		conta2.receber(100.50); // como o método é publico é possível o acessar de outras classes
 
 		System.out.println("R$" + conta1.saldo()); // o método saldo serve apenas para mostrar o saldo da conta, por
 													// isso pode ser chamado dentro do syso
+		System.out.println("R$" + conta2.saldo());
+		
+		
+		
+		
+
+		
+		
+		
 		
 
 	}
