@@ -6,7 +6,7 @@ public class Veiculo {
 	protected String modelo;
 	protected int ano;
 
-	public void buzinar() {
+	public void Buzinar() {
 		System.out.println("BI BI");
 	}
 	
