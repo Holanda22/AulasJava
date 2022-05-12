@@ -9,8 +9,8 @@ public class Bebida {
 	}
 
 	public void preparar() {// quando não há uma ação em comum para todas as classes filhas de uma
-							// superclasse dentro de um há um passo método vazio para estabelecer que toda
-							// bebida deve ser preparada
+							// superclasse, podemos implementar um método vazio para estabelecer que toda
+							// bebida deve ser preparada, cada uma de seu jeito.
 		System.out.println("Pegando copo");
 
 	}
