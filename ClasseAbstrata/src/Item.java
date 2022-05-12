@@ -5,12 +5,11 @@ public abstract class Item { // classes abstratas são classes pai que determinam
 	private int posX;
 	private int posY;
 
-	public void pegar() { // a classe ser abstrata não determina automaticamente que seus métodos também
-							// são abstratos, isso deve ser explicitado
+	public abstract void pegar(); // a classe ser abstrata não determina automaticamente que seus métodos também
+									// são abstratos, isso deve ser explicitado
 
-	}
-
-	public int getPosX() {
+	public int getPosX() { // métodos não explicitados como abstratos, seguem os conceitos de herança e
+							// estão visíveis para as subclasses, mas não são obrigatórios
 		return posX;
 	}
 
