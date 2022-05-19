@@ -151,16 +151,56 @@ public class Main {
 //
 //		x2[4] = 6; // atribuição do número 6 no espaço de indice 4 dentro da variável x2
 
-		int[] numero = new int[6];
-		Scanner teclado = new Scanner(System.in);
+//		int[] numero = new int[6];
+//		Scanner teclado = new Scanner(System.in);
+//
+//		for (int x = 0; x < numero.length; x++) {
+//			System.out.println("Digite um número aleatório:");
+//			numero[x] = teclado.nextInt(); // atribuição de valor à variável x, para cada indice
+//		}
+//
+//		for (int x = 0; x < numero.length; x++) {
+//			System.out.println("Indice " + x + " = " + numero[x]);
+//		}
 
-		for (int x = 0; x < numero.length; x++) {
-			System.out.println("Digite um número aleatório:");
-			numero[x] = teclado.nextInt(); // atribuição de valor à variável x, para cada indice
-		}
+		// criando um array do tipo Object, nele é possível guardar qualquer tipo de
+		// valor, visto que Object é a superclasse de todas as outras classes no java
+//		int[] arrayQualquer = new int[3]; // arrays precisam ser instanciados, caracteristica que indica que os espaços
+//											// da matriz são construidos na memória heap e na stack estão apenas os
+//											// endereços desses espaços
+//		Object[] arrayObject = new Object[6];
+//
+//		arrayObject[0] = 12;
+//		arrayObject[1] = "Beatriz";
+//		arrayObject[2] = 13.8;
+//		arrayObject[3] = true;
+//		arrayObject[5] = arrayQualquer; // o array de tipo Object recebe qualquer valor, inclusive outro array. neste
+//										// caso não foi especificado o valor de qual espaço é para ser impresso na
+//										// tela, então o que é mostrado é o endereço desse array
+//
+//		for (int x = 0; x < arrayObject.length; x++) {
+//			System.out.println("Indice " + x + " = " + arrayObject[x]);
+//		}
 
-		for (int x = 0; x < numero.length; x++) {
-			System.out.println("Indice " + x + " = " + numero[x]);
+		// Arrays Bidirecional: que possui duas direções, linhas e colunas
+		// construção de Array bidirecional:
+		int[][] arrayBidirecional = new int[4][3]; // o primeiro colchetes determina a quantidade de linhas e o segundo
+													// a quantidade de colunas
+		arrayBidirecional[0][0] = 8;// para atribuir valores neste array basta indicar o indice de em qual linha o
+									// valor vai ser encontrado e o indice de em qual coluna
+		arrayBidirecional[2][1] = 7;// aqui o valor 7 inteiro está localizado no espaço do array na linha 2 e na
+									// coluna 1, lembrando que os indices começam em 0
+
+		for (int linha = 0; linha < arrayBidirecional.length; linha++) { // for para contagem do primeiro indice
+			for (int coluna = 0; coluna < arrayBidirecional[0].length; coluna++) { // for para contagem o segundo
+																					// indice, logo quando o indice da
+																					// linha for 0, o da coluna roda até
+																					// atingir o maximo de colunas,
+																					// assim interando a primeria linha
+																					// do array e indo rodar a segunda
+				System.out.print("Indice [" + linha + "][" + coluna + "] = " + arrayBidirecional[linha][coluna] + " ");
+			}
+			System.out.println();
 		}
 
 	}
