@@ -3,9 +3,23 @@ public class Pessoa {
 	
 	private String nome;
 	private int idade;
+	public enum Sexo {
+		FEMININO,
+		MASCULINO;
+	}
+	private Sexo sexo;
 	private Endereco endereco;
 	
-	
+		
+	public void sexoNum(int sexo) {
+		if(sexo == 1) {
+			this.sexo=Sexo.FEMININO;
+		}
+		else if(sexo == 2) {
+			this.sexo=Sexo.MASCULINO;
+		}
+
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -24,6 +38,19 @@ public class Pessoa {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
+	
+	
+	@Override
+	public String toString() {
+		return "Pessoa [nome=" + nome + ", idade=" + idade + ", sexo=" + sexo + ", endereco=" + endereco + "]";
+	}
+
+	
+	
+	
+	
+	
+	
 	
 	
 	
