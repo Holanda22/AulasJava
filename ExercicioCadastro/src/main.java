@@ -1,4 +1,4 @@
-import java.io.BufferedWriter;
+//import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class main {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args)  { //throws IOException
 		
 		Scanner entrada = new Scanner(System.in);
 		
@@ -32,11 +32,11 @@ public class main {
 			cadastro.add(pessoa);
 		}
 		
-		for(Pessoa cadastros : cadastro) {
-			System.out.println(cadastros);
-			try (BufferedWriter escrever = new BufferedWriter(new FileWriter("Saida.txt"))){
-			}
-		}
+//		for(Pessoa cadastros : cadastro) {
+//			System.out.println(cadastros);
+//			try (BufferedWriter escrever = new BufferedWriter(new FileWriter("Saida.txt"))){
+//			}
+//		}
 
 	}
 
