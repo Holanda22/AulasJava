@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -11,16 +13,34 @@ public class Main {
 																						// caso o arquivo não seja
 																						// encontrado
 
-		try (BufferedReader reader = new BufferedReader(new FileReader("entrada.txt"))) {
+//		try (BufferedReader reader = new BufferedReader(new FileReader("entrada.txt"))) {
+//			String line;
+//			String string = "";
+//
+//			while ((line = reader.readLine()) != null) { // método readLine lê a linha do arquivo até o \n, após isso lê
+//															// a debaixo
+//				string += line + "\n";
+//			}
+//			System.out.println(string);
+//		}
+		List<Mouse> listaDeMouses = new ArrayList<Mouse>();
+		
+		try (BufferedReader reader = new BufferedReader(new FileReader("Mouses.txt"))) {
 			String line;
 			String string = "";
 
 			while ((line = reader.readLine()) != null) { // método readLine lê a linha do arquivo até o \n, após isso lê
 															// a debaixo
-				string += line + "\n";
+				Mouse mouse = new Mouse(line);
+				
+				listaDeMouses.add(mouse);
 			}
-			System.out.println(string);
 		}
+		
+		for(Mouse mouse : listaDeMouses) {
+			System.out.println(mouse);
+		}
+		
 
 	}
 

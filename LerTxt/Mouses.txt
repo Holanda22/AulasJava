@@ -1,0 +1,3 @@
+Mouse: funciona=false, qtdBotoes=2, tamanho=pequeno
+Mouse: funciona=true, qtdBotoes=5, tamanho=grande
+Mouse: funciona=true, qtdBotoes=3, tamanho=médio
