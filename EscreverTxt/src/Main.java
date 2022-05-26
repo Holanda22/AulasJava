@@ -34,7 +34,5 @@ public class Main {
 				escrever2.write(mouse.toString());
 			}
 		}
-
 	}
-
 }

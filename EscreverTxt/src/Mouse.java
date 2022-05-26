@@ -12,7 +12,7 @@ public class Mouse {
 
 	@Override
 	public String toString() {
-		return "Mouse [funciona=" + funciona + ", qtdBotoes=" + qtdBotoes + ", tamanho=" + tamanho + "]" + "\n"; // \n
+		return "Mouse [funciona=" + funciona + ", qtdBotoes=" + qtdBotoes + ", tamanho=" + tamanho + "] \n"; // \n
 																													// na
 																													// string
 																													// serve
