@@ -15,10 +15,10 @@ public class Main {
 			String line;
 			String string = "";
 
-			while ((line = reader.readLine()) != null) { //método readLine lê a linha do arquivo até o \n, após isso lê a debaixo
+			while ((line = reader.readLine()) != null) { // método readLine lê a linha do arquivo até o \n, após isso lê
+															// a debaixo
 				string += line + "\n";
 			}
-
 			System.out.println(string);
 		}
 
