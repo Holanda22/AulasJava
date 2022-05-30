@@ -2,7 +2,7 @@
 public class Pessoa {
 	
 	private String nome;
-	private int idade;
+	private String idade;
 	public enum Sexo {
 		FEMININO,
 		MASCULINO;
@@ -26,10 +26,10 @@ public class Pessoa {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public int getIdade() {
+	public String getIdade() {
 		return idade;
 	}
-	public void setIdade(int idade) {
+	public void setIdade(String idade) {
 		this.idade = idade;
 	}
 	public Endereco getEndereco() {
@@ -42,7 +42,30 @@ public class Pessoa {
 	
 	@Override
 	public String toString() {
-		return "Pessoa [nome=" + nome + ", idade=" + idade + ", sexo=" + sexo + ", endereco=" + endereco + "]";
+		return "Nome:" + nome + ", idade:" + idade + ", sexo:" + sexo + "," + endereco;
+	}
+	public Pessoa(String pessoa) {
+		
+		String[] arrayAux1 = pessoa.split(",");
+		
+		String[] arrayAux2 = arrayAux1[0].split(":");
+		this.nome = arrayAux2[1].trim();
+		
+		String[] arrayAux3 = arrayAux1[1].split(":");
+		this.idade = arrayAux3[1].trim();
+		
+		String[] arrayAux4 = arrayAux1[2].split(":");
+		arrayAux4[1].trim();
+			if("FEMININO" == arrayAux4[1]) 
+				this.sexo = Sexo.FEMININO;
+			else
+				this.sexo = Sexo.MASCULINO;
+			
+		Endereco endereco = new Endereco(arrayAux1[3]);
+		this.endereco = endereco;
+		
+	}
+	public Pessoa() {
 	}
 
 	
