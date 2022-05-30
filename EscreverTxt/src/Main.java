@@ -13,8 +13,9 @@ public class Main {
 																							// código e caso dê erro
 																							// tudo feito antes é
 																							// apagado para não se criar
-																							// arquivos corrompidos
+																					// arquivos corrompidos
 			escrever.write(s);
+			escrever.newLine();
 		}
 
 		Mouse mouse1 = new Mouse(false, 2, "pequeno");
@@ -27,7 +28,7 @@ public class Main {
 		mouses.add(mouse2);
 		mouses.add(mouse3);
 
-		try (BufferedWriter escrever2 = new BufferedWriter(new FileWriter("Mouses.txt"))) {
+		try (BufferedWriter escrever2 = new BufferedWriter(new FileWriter("Mouses.txt", true))) {
 			for (Mouse mouse : mouses) { // fazendo o for de interação com a List dentro do BufferedWriter se utiliza a
 											// porta aberta para escrever a quantidade de vezes que for necessário de
 											// acordo com a quantidade de elementos da List
