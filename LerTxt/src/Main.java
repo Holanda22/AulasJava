@@ -27,7 +27,6 @@ public class Main {
 		
 		try (BufferedReader reader = new BufferedReader(new FileReader("Mouses.txt"))) {
 			String line;
-			String string = "";
 
 			while ((line = reader.readLine()) != null) { // método readLine lê a linha do arquivo até o \n, após isso lê
 															// a debaixo
