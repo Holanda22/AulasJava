@@ -2,7 +2,7 @@
 public class Endereco {
 	
 	private String rua;
-	private String numero;
+	private int numero;
 	private String bairro;
 	
 	
@@ -12,10 +12,10 @@ public class Endereco {
 	public void setRua(String rua) {
 		this.rua = rua;
 	}
-	public String getNumero() {
+	public int getNumero() {
 		return numero;
 	}
-	public void setNumero(String numero) {
+	public void setNumero(int numero) {
 		this.numero = numero;
 	}
 	public String getBairro() {
@@ -33,14 +33,14 @@ public class Endereco {
 		this.rua = arrayAux2[1].trim();
 		
 		String[] arrayAux3= arrayAux1[1].split(":");
-		this.numero = arrayAux3[1].trim();
+		this.numero = Integer.parseInt(arrayAux3[1].trim());
 		
 		String[] arrayAux4 = arrayAux1[2].split(":");
 		this.bairro = arrayAux4[1].trim();
 	}
 	@Override
 	public String toString() {
-		return "Rua:" + rua + "- nº:" + numero + "- bairro:" + bairro;
+		return "Rua:" + rua + " - nº:" + numero + " - bairro:" + bairro;
 	}
 	
 		

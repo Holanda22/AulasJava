@@ -1,1 +1,3 @@
-
+Nome:Beatriz, idade:18, sexo:FEMININO, Rua:Esquivel - nº:2900 - bairro:Canhema
+Nome:Fortunato, idade:54, sexo:MASCULINO, Rua:Dias - nº:321 - bairro:Feliz
+Nome:Gabriela, idade:21, sexo:FEMININO, Rua:Lopes - nº:908 - bairro:Borboleta
