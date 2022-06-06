@@ -67,6 +67,7 @@ public class main {
 				break;
 
 			case 2:
+				cadastrosLidos.clear();
 				try (BufferedReader reader = new BufferedReader(new FileReader("Cadastros.txt"))) {
 					String line = "";
 
@@ -75,28 +76,26 @@ public class main {
 						cadastrosLidos.add(lidos);
 					}
 				}
-				System.out.println("Digite o nome da pessoa que deseja excluir o cadastro:");
-				String nomeExcluir = entrada.next();
-				boolean control = true;
-
+				System.out.println("Cadastros:");
 				for (int x = 0; x < cadastrosLidos.size(); x++) {
-					if (cadastrosLidos.get(x).getNome() == nomeExcluir.trim()) {
-						cadastrosLidos.remove(x);
-						try (BufferedWriter escrever = new BufferedWriter(new FileWriter("Cadastros.txt"))) {
-							for (Pessoa reescrever : cadastrosLidos) {
-							escrever.write(reescrever.toString() + "\n");
-							}
-						}
-						control = true;
-					} else {
-						control = false;
-					}
+					System.out.println(x + " - " + cadastrosLidos.get(x));
 				}
-
-				if (control) {
-					System.out.println("Cadastro excluido com sucesso!");
-				} else {
-					System.out.println("Cadastro não encontrado");
+				
+				System.out.println();
+				System.out.println("Digite o indíce do cadastro que deseja excluir:");
+				int excluir = entrada.nextInt();
+				
+				if(excluir > cadastrosLidos.size()) {
+					System.out.println("Esse cadastro não existe!");
+				}
+				else {
+					cadastrosLidos.remove(excluir);
+					try (BufferedWriter escrever = new BufferedWriter(new FileWriter("Cadastros.txt"))) {
+						for (Pessoa reescrever : cadastrosLidos) {
+						escrever.write(reescrever.toString() + "\n");
+						}
+					}
+					System.out.println("Cadastro excluído com sucesso!");
 				}
 
 				break;
@@ -120,61 +119,6 @@ public class main {
 				}
 			}
 		}
-
-//		for(int x = 0; x < 1; x++) {
-//			System.out.println("CADASTRO");
-//			Pessoa pessoa = new Pessoa();
-//			
-//			System.out.println("Digite seu nome:");
-//			pessoa.setNome(entrada.next());
-//			
-//			System.out.println("Digite sua idade:");
-//			pessoa.setIdade(entrada.nextInt());
-//			
-//			System.out.println("Digite seu sexo: 1-Feminino 2-Masculino:");
-//			int y = pessoa.sexoNum(entrada.nextInt());
-//			while(y != 1 && y != 2) {
-//				System.out.println("Opção não disponível!");
-//				System.out.println("Digite seu sexo: 1-Feminino 2-Masculino:");
-//				y = pessoa.sexoNum(entrada.nextInt());
-//			}
-//			
-//			pessoa.setEndereco(new Endereco());
-//			System.out.println("Endereço");
-//			
-//			System.out.println("Rua:");
-//			pessoa.getEndereco().setRua(entrada.next());
-//			
-//			System.out.println("Nº:");
-//			pessoa.getEndereco().setNumero(entrada.nextInt());
-//			
-//			System.out.println("Bairro:");
-//			pessoa.getEndereco().setBairro(entrada.next());
-//			
-//			cadastros.add(pessoa);
-//		}
-
-//		try (BufferedWriter escrever = new BufferedWriter(new FileWriter("Cadastros.txt", true))) {
-//			for (Pessoa pessoa : cadastros) {
-//				escrever.write(pessoa.toString() + "\n");
-//			}
-//		}
-//
-//		try (BufferedReader reader = new BufferedReader(new FileReader("Cadastros.txt"))) {
-//			String line = "";
-//
-//			while ((line = reader.readLine()) != null) {
-//				Pessoa pessoa = new Pessoa(line);
-//				cadastrosLidos.add(pessoa);
-//			}
-//		}
-
-//		System.out.println("Cadastros realizados:");
-//
-//		for (Pessoa pessoa : cadastrosLidos) {
-//			System.out.println(pessoa);
-//		}
-
 	}
 
 }
