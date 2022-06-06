@@ -3,7 +3,7 @@ public class Aplicacao {
 
 	public static void main(String[] args) {
 		// Item item = new Item (); uma característica das classes abstratas é que não é
-		// possível instanciá-las, já quelas são tão genéricas ao ponto de serem
+		// possível instanciá-las, já que elas são tão genéricas ao ponto de serem
 		// abstratas
 
 		Item item = new Cogumelo(); // Não é possível instanciar um objeto abstrato, mas é possível instanciar

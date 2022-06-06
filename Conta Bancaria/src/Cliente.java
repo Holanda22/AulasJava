@@ -36,12 +36,6 @@ public class Cliente {
 	public String toString() {
 		return "************************************ \nCliente: \n Nome:" + nome + "\n Cpf:" + cpf + " \n Número da conta:" + numConta + "\n************************************" ;
 	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(cpf, nome, numConta);
-	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

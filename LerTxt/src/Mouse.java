@@ -30,5 +30,8 @@ public class Mouse {
 	@Override
 	public String toString() {
 		return "Mouse: funciona=" + funciona + ", qtdBotoes=" + qtdBotoes + ", tamanho=" + tamanho + "\n";
+		// to string é um método da classe Object que se não subscrito, quando chamado o
+		// objeto o que aparece no console é o seu endereço e quando feito override
+		// aparecem seus atributos e seus valores
 	}
 }

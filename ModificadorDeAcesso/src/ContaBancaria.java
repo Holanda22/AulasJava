@@ -8,7 +8,8 @@ public class ContaBancaria {
 	private double saldo;
 
 	public ContaBancaria() { // construtor do objeto, com ele é possível inicializar todo objeto com as
-								// definições declaradas entre chaves
+								// definições declaradas entre chaves ou estabelecer que deva-se escrever o
+								// valor dos atributos como parâmetro
 		ativo = true;
 		saldo = 1;
 	}

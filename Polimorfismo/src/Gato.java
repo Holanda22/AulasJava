@@ -1,9 +1,10 @@
 
-public class Gato extends Animal{
+public class Gato extends Animal {
 
-	@Override
+	@Override // override serve para subscrever algum método da superclasse que muda de acordo
+				// com a subclasse
 	public void Falar() {
 		System.out.println("MIAU");
 	}
-	
+
 }

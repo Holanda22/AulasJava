@@ -5,13 +5,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+import java.util.Scanner; //Importação de alguma função de uma biblioteca da JRE, após importada a função pode ser usada no código
 
 public class main {
 
 	public static void main(String[] args) throws IOException { //
 
-		Scanner entrada = new Scanner(System.in);
+		Scanner entrada = new Scanner(System.in); // objeto que tem como função fazer oq é digitado no console entrar no
+													// sistema
 
 		List<Pessoa> cadastrosLidos = new ArrayList<Pessoa>();
 
@@ -20,7 +21,8 @@ public class main {
 		int menu = 0;
 
 		while (menu != 4) {
-			System.out.println("Menu de Cadastro:");
+			System.out.println("Menu de Cadastro:"); // sysoprintln serve para escrever uma linha de texto que será
+														// mostrada no console
 			System.out.println("Digite 1 para cadastrar uma pessoa");
 			System.out.println("Digite 2 para excluir um cadastro existente");
 			System.out.println("Digite 3 para visualizar os cadastros feitos");
@@ -80,19 +82,18 @@ public class main {
 				for (int x = 0; x < cadastrosLidos.size(); x++) {
 					System.out.println(x + " - " + cadastrosLidos.get(x));
 				}
-				
+
 				System.out.println();
 				System.out.println("Digite o indíce do cadastro que deseja excluir:");
 				int excluir = entrada.nextInt();
-				
-				if(excluir > cadastrosLidos.size()) {
+
+				if (excluir > cadastrosLidos.size()) {
 					System.out.println("Esse cadastro não existe!");
-				}
-				else {
+				} else {
 					cadastrosLidos.remove(excluir);
 					try (BufferedWriter escrever = new BufferedWriter(new FileWriter("Cadastros.txt"))) {
 						for (Pessoa reescrever : cadastrosLidos) {
-						escrever.write(reescrever.toString() + "\n");
+							escrever.write(reescrever.toString() + "\n");
 						}
 					}
 					System.out.println("Cadastro excluído com sucesso!");

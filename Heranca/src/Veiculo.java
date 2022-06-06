@@ -1,15 +1,16 @@
 
 public class Veiculo {
-	
-	private String nome;
-	protected String marca;
+
+	private String nome; // encapsulamento de classe
+	protected String marca; // para encapsular superclasses fazendo com que suas subclasses tenham acesso
+							// aos seus atributos, usa-se o modificador de acesso protected
 	protected String modelo;
 	protected int ano;
 
 	public void Buzinar() {
 		System.out.println("BI BI");
 	}
-	
+
 	public void Imprimir() {
 		System.out.println("Marca: " + marca);
 		System.out.println("Modelo: " + modelo);

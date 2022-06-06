@@ -13,8 +13,9 @@ public class Main {
 																							// código e caso dê erro
 																							// tudo feito antes é
 																							// apagado para não se criar
-																					// arquivos corrompidos
-			escrever.write(s);
+			// arquivos corrompidos
+			escrever.write(s); // o objeto escrever, tem funções relacionadas a escrita de String para um
+								// arquivo de texto, o método write é quem realiza essa função 
 			escrever.newLine();
 		}
 
@@ -23,7 +24,7 @@ public class Main {
 		Mouse mouse3 = new Mouse(true, 3, "médio");
 
 		List<Mouse> mouses = new ArrayList<Mouse>();
-		
+
 		mouses.add(mouse1);
 		mouses.add(mouse2);
 		mouses.add(mouse3);

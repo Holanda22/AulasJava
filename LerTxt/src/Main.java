@@ -24,22 +24,25 @@ public class Main {
 //			System.out.println(string);
 //		}
 		List<Mouse> listaDeMouses = new ArrayList<Mouse>();
-		
-		try (BufferedReader reader = new BufferedReader(new FileReader("Mouses.txt"))) {
+
+		try (BufferedReader reader = new BufferedReader(new FileReader("Mouses.txt"))) { // instância do objeto de tipo
+																							// BufferedReader que tem
+																							// como função ler um
+																							// document e tranformar em
+																							// String
 			String line;
 
 			while ((line = reader.readLine()) != null) { // método readLine lê a linha do arquivo até o \n, após isso lê
 															// a debaixo
 				Mouse mouse = new Mouse(line);
-				
+
 				listaDeMouses.add(mouse);
 			}
 		}
-		
-		for(Mouse mouse : listaDeMouses) {
+
+		for (Mouse mouse : listaDeMouses) {
 			System.out.println(mouse);
 		}
-		
 
 	}
 
