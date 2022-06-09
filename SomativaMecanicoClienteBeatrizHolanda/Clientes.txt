@@ -1,0 +1,4 @@
+Usuario [nome=Laura, cpf=3001]Cliente [valorPagarServico=56.25, servico=Servico [nome=Troca de Pneu, qtdHorasServico=1.0, valorHoraServico=12.0, mecanico=Usuario [nome=Valdecir, cpf=4002]Mecanico [maoDeObra=50.5]], formaPag=A_VISTA]
+Usuario [nome=Claúdio, cpf=3002]Cliente [valorPagarServico=68.75, servico=Servico [nome=Troca de Pneu, qtdHorasServico=1.0, valorHoraServico=12.0, mecanico=Usuario [nome=Valdecir, cpf=4002]Mecanico [maoDeObra=50.5]], formaPag=CARNE]
+Usuario [nome=Vanessa, cpf=3003]Cliente [valorPagarServico=94.5, servico=Servico [nome=Troca de Óleo, qtdHorasServico=3.0, valorHoraServico=15.0, mecanico=Usuario [nome=Jurandir, cpf=4001]Mecanico [maoDeObra=60.0]], formaPag=A_VISTA]
+Usuario [nome=Fortunato, cpf=3004]Cliente [valorPagarServico=110.25, servico=Servico [nome=Troca de Óleo, qtdHorasServico=3.0, valorHoraServico=15.0, mecanico=Usuario [nome=Jurandir, cpf=4001]Mecanico [maoDeObra=60.0]], formaPag=CARTAO_CREDITO]
