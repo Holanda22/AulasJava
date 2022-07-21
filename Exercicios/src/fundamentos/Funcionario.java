@@ -13,7 +13,7 @@ public class Funcionario {
 		private String nome;
 		private double salario;
 
-		private Cargo(String nome, int salario) {
+		private Cargo(String nome, double salario) {
 			this.nome = nome;
 			this.salario = salario;
 		}
@@ -50,8 +50,8 @@ public class Funcionario {
 		salario = cargo.salario;
 	}
 
-	public String getCargo() {
-		return cargo.getNome();
+	public Cargo getCargo() {
+		return cargo;
 	}
 
 	public void setCargo(int num) {
@@ -63,7 +63,4 @@ public class Funcionario {
 			cargo = Cargo.GESTOR_FINANCEIRO;
 		} 
 	}
-	
-	
-
 }
