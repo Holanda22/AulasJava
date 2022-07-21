@@ -46,12 +46,12 @@ public class Funcionario {
 		return salario;
 	}
 
-	public void setSalario() {
+	public void setSalario(Cargo cargo) {
 		salario = cargo.salario;
 	}
 
 	public String getCargo() {
-		return cargo.nome;
+		return cargo.getNome();
 	}
 
 	public void setCargo(int num) {

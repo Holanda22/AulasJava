@@ -24,6 +24,7 @@ public class ProgramaRevisao {
 		System.out.println("3 - " + Cargo.GESTOR_FINANCEIRO.getNome());
 		
 		funcionario1.setCargo(entrada.nextInt());
+		funcionario1.setSalario(funcionario1.getCargo());
 		
 		System.out.println(funcionario1.getNome());
 		System.out.println(funcionario1.getCargo());
